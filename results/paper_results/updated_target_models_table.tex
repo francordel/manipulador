@@ -1,0 +1,54 @@
+\begin{table}[htbp]
+\centering
+\caption{Target Model Specifications}
+\label{tab:target_models}
+\scriptsize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+\textbf{Model} & \textbf{Size} & \textbf{Safety Level} & \textbf{Context Window} & \textbf{Size Category} & \textbf{Architectural Profile} \\
+\midrule
+qwen2\_5\_0\_5b\_instruct & ≈0.5B & Light & 128K tokens & Micro & Micro model with lightweight safety training, \\
+& parameters & & & & optimized for instruction following \\
+\midrule
+llama\_3\_2\_1b & ≈1B & Medium & 128K tokens & Small & Compact Meta model with moderate safety \\
+& parameters & & & & training and multilingual support \\
+\midrule
+qwen2\_1\_5b\_instruct & ≈1.5B & Light & 32K tokens & Small & Compact model with basic safety training, \\
+& parameters & & & & good efficiency-performance balance \\
+\midrule
+granite\_3\_3\_2b\_instruct & ≈2B & Medium & 128K tokens & Small & Compact enterprise model with balanced \\
+& parameters & & & & safety training and efficiency \\
+\midrule
+llama\_3\_2\_3b\_instruct & ≈3B & Medium & 128K tokens & Small & Small instruction-tuned model with balanced \\
+& parameters & & & & safety and performance characteristics \\
+\midrule
+qwen2\_7b\_instruct & ≈7B & Medium & 128K tokens & Medium & Medium-sized model with moderate safety \\
+& parameters & & & & training and strong multilingual capabilities \\
+\midrule
+mistral\_7b\_v03\_medium & ≈7.3B & Medium & 32K tokens & Medium & Balanced safety training with good \\
+& parameters & & & & instruction following capabilities \\
+\midrule
+granite\_3\_3\_8b\_instruct & ≈8B & High & 128K tokens & Medium & Enterprise-grade model with robust safety \\
+& parameters & & & & training and code generation focus \\
+\midrule
+mixtral\_8x7b\_v01 & ≈46.7B & High & 32K tokens & Large & Large mixture-of-experts model with strong \\
+& (8x7B MoE) & & & & safety training and reasoning capabilities \\
+\bottomrule
+\end{tabular}
+}
+
+\begin{minipage}{\textwidth}
+\vspace{0.5em}
+\small
+\textit{
+\textbf{Model Selection Criteria:} \\
+- \textbf{Size diversity:} From 0.5B (micro) to 46.7B parameters (large MoE) \\
+- \textbf{Safety levels:} Light (3 models), Medium (5 models), High (2 models) \\
+- \textbf{Context windows:} 32K-128K tokens for modern long-context capabilities \\
+- \textbf{Architectural variety:} Dense models and mixture-of-experts (MoE) \\
+- \textbf{Enterprise focus:} Granite models optimized for enterprise safety \\
+- \textbf{Exclusion:} meta\_llama\_3\_70b removed due to consistently poor performance
+}
+\end{minipage}
+\end{table}
